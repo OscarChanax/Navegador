@@ -105,10 +105,6 @@
             // comboBoxurl
             // 
             this.comboBoxurl.FormattingEnabled = true;
-            this.comboBoxurl.Items.AddRange(new object[] {
-            "https://www.mesoamericana.edu.gt/",
-            "https://www.microsoft.com/es-gt",
-            "https://es.wikipedia.org/"});
             this.comboBoxurl.Location = new System.Drawing.Point(29, 34);
             this.comboBoxurl.Name = "comboBoxurl";
             this.comboBoxurl.Size = new System.Drawing.Size(626, 21);

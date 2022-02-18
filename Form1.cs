@@ -19,10 +19,9 @@ namespace Navegador
         }
         private void Guardar(string fileName, string texto)
         {
-            
-            FileStream stream = new FileStream(fileName, FileMode.OpenOrCreate, FileAccess.Write);
+            FileStream stream = new FileStream(fileName, FileMode.Append, FileAccess.Write);
             StreamWriter writer = new StreamWriter(stream);
-            writer.WriteLine(texto);  
+            writer.WriteLine(texto);
             writer.Close();
         }
         //private void Leer (string fileName)
@@ -30,7 +29,7 @@ namespace Navegador
         //    FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
         //    StreamReader reader = new StreamReader(stream);
         //    while (reader.Peek() > -1)
-           
+
         //    {
         //        comboBoxurl.Items.Add(reader.ReadLine());
         //    }
@@ -39,7 +38,6 @@ namespace Navegador
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            comboBoxurl.SelectedIndex = 0;
             webBrowser1.GoHome();
             //Leer("Historial.txt");
 
@@ -80,7 +78,7 @@ namespace Navegador
             }
 
             comboBoxurl.Items.Add(uri);
-          //  Guardar("Historial.txt", uri);
+            Guardar("Historial.txt", uri);
         }
 
         private void inicioToolStripMenuItem_Click_1(object sender, EventArgs e)
