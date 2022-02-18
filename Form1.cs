@@ -71,14 +71,17 @@ namespace Navegador
                 webBrowser1.Navigate(uri);
             }
             int Listo = 0;
-            for (int i = 0; i< comboBoxurl.Items.Count;i++)
-                    {
+            for (int i = 0; i< comboBoxurl.Items.Count; i++)
+            {
                 if (uri == comboBoxurl.Items[i].ToString())
                     Listo++;
             }
-
-            comboBoxurl.Items.Add(uri);
-            Guardar("Historial.txt", uri);
+            if (Listo==0)
+            {
+                comboBoxurl.Items.Add(uri);
+                Guardar("Historial.txt", uri);
+            }
+            
         }
 
         private void inicioToolStripMenuItem_Click_1(object sender, EventArgs e)
