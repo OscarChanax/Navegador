@@ -37,7 +37,10 @@ namespace Navegador
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            webBrowser1.GoHome();
             Leer("Historial.txt");
+
         }
 
         private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
