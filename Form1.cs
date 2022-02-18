@@ -24,22 +24,22 @@ namespace Navegador
             writer.WriteLine(texto);
             writer.Close();
         }
-        //private void Leer (string fileName)
-        //{
-        //    FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-        //    StreamReader reader = new StreamReader(stream);
-        //    while (reader.Peek() > -1)
+        private void Leer(string fileName)
+        {
+            FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+            StreamReader reader = new StreamReader(stream);
+            while (reader.Peek() > -1)
 
-        //    {
-        //        comboBoxurl.Items.Add(reader.ReadLine());
-        //    }
-        //    reader.Close();
-        //}
+            {
+                comboBoxurl.Items.Add(reader.ReadLine());
+            }
+            reader.Close();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
             webBrowser1.GoHome();
-            //Leer("Historial.txt");
+            Leer("Historial.txt");
 
         }
 
