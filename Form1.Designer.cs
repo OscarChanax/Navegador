@@ -35,7 +35,7 @@
             this.haciaDelanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxurl = new System.Windows.Forms.ComboBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -102,18 +102,18 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // comboBoxurl
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBoxurl.FormattingEnabled = true;
+            this.comboBoxurl.Items.AddRange(new object[] {
             "https://www.mesoamericana.edu.gt/",
             "https://www.microsoft.com/es-gt",
             "https://es.wikipedia.org/"});
-            this.comboBox1.Location = new System.Drawing.Point(29, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(626, 21);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.Tag = "";
+            this.comboBoxurl.Location = new System.Drawing.Point(29, 34);
+            this.comboBoxurl.Name = "comboBoxurl";
+            this.comboBoxurl.Size = new System.Drawing.Size(626, 21);
+            this.comboBoxurl.TabIndex = 2;
+            this.comboBoxurl.Tag = "";
             // 
             // webBrowser1
             // 
@@ -133,7 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 527);
             this.Controls.Add(this.webBrowser1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBoxurl);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
@@ -154,7 +154,7 @@
         private System.Windows.Forms.ToolStripMenuItem haciaAtrásToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem haciaDelanteToolStripMenuItem;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxurl;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }

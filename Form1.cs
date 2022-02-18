@@ -25,23 +25,23 @@ namespace Navegador
             writer.WriteLine(texto);  
             writer.Close();
         }
-        private void Leer (string fileName)
-        {
-            FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-            StreamReader reader = new StreamReader(stream);
-            while (reader.Peek() > -1)
+        //private void Leer (string fileName)
+        //{
+        //    FileStream stream = new FileStream(fileName, FileMode.Open, FileAccess.Read);
+        //    StreamReader reader = new StreamReader(stream);
+        //    while (reader.Peek() > -1)
            
-            {
-                comboBox1.Items.Add(reader.ReadLine());
-            }
-            reader.Close();
-        }
+        //    {
+        //        comboBoxurl.Items.Add(reader.ReadLine());
+        //    }
+        //    reader.Close();
+        //}
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            comboBox1.SelectedIndex = 0;
+            comboBoxurl.SelectedIndex = 0;
             webBrowser1.GoHome();
-            Leer("Historial.txt");
+            //Leer("Historial.txt");
 
         }
 
@@ -53,8 +53,8 @@ namespace Navegador
         private void button1_Click(object sender, EventArgs e)
         {
             string uri = "";
-            uri = comboBox1.Text.ToString();
-            if (comboBox1.SelectedIndex.Equals(-1))
+            uri = comboBoxurl.Text.ToString();
+            if (comboBoxurl.SelectedIndex.Equals(-1))
             {
                 
                 if (uri.Contains(".") == true)
@@ -73,14 +73,14 @@ namespace Navegador
                 webBrowser1.Navigate(uri);
             }
             int Listo = 0;
-            for (int i = 0; i< comboBox1.Items.Count;i++)
+            for (int i = 0; i< comboBoxurl.Items.Count;i++)
                     {
-                if (uri == comboBox1.Items[i].ToString())
+                if (uri == comboBoxurl.Items[i].ToString())
                     Listo++;
             }
 
-            comboBox1.Items.Add(uri);
-            Guardar("Historial.txt", uri);
+            comboBoxurl.Items.Add(uri);
+          //  Guardar("Historial.txt", uri);
         }
 
         private void inicioToolStripMenuItem_Click_1(object sender, EventArgs e)
