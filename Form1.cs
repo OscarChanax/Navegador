@@ -66,21 +66,21 @@ namespace Navegador
                     webBrowser1.Navigate(uri);
                 }
             }
-            else
-            {
-                webBrowser1.Navigate(uri);
-            }
-            int Listo = 0;
-            for (int i = 0; i< comboBoxurl.Items.Count; i++)
-            {
-                if (uri == comboBoxurl.Items[i].ToString())
-                    Listo++;
-            }
-            if (Listo==0)
-            {
-                comboBoxurl.Items.Add(uri);
-                Guardar("Historial.txt", uri);
-            }
+            //else
+            //{
+            //    webBrowser1.Navigate(uri);
+            //}
+            //int Listo = 0;
+            //for (int i = 0; i< comboBoxurl.Items.Count; i++)
+            //{
+            //    if (uri == comboBoxurl.Items[i].ToString())
+            //        Listo++;
+            //}
+            //if (Listo==0)
+            //{
+            //    comboBoxurl.Items.Add(uri);
+            //    Guardar("Historial.txt", uri);
+            //}
             
         }
 
